@@ -52,10 +52,6 @@ jobs:
     steps:
     - name: Deployment
       run: echo "Rocket has been launched !
-    
-  
-      
-      
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
