@@ -39,14 +39,17 @@ jobs:
       - name: Run a one-line script
         run: echo "Welcome on board!"
 
+      - run: echo "Checking Rocket setup properties..."
       - name: Test fields
-        run: sh test-fields.sh | echo "Checking Rocket setup properties..."
-
+        run: sh test-fields.sh
+        
+      - run: echo "Checking values format..." 
       - name: Test format
-        run: sh test-format.sh | echo "Checking values format..."
-
+        run: sh test-format.sh
+        
+      - run: echo "Checking data consistency..."
       - name: Test consistency
-        run: sh test-consistency.sh | echo "Checking data consistency..."
+        run: sh test-consistency.sh
   
   deploy:
     needs: test
