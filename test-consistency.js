@@ -9,7 +9,7 @@ try {
 	if (data.data.angle && data.data.angle != data.asteroidData.hardness * 2) {
 		errors.push(new Error("Rocket's angle does not fit for this asteroid hardness"));
 	}
-	if (data.data.weight && data.data.weight != data.asteroidData.weight * 0.054) {
+	if (data.data.weight && data.data.weight != data.asteroidData.weight * 0.54) {
 		errors.push(new Error("Rocket's weight is not OK according to asteroid's weight"));
 	}
 	if (errors.length > 0) {
