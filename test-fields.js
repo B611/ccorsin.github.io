@@ -6,9 +6,6 @@ try {
     if (!data.data.speed) {
       errors.push(new Error("Missing rocket's speed property"));
     }
-    if (!data.data.date) {
-      errors.push(new Error("Missing rocket's date property"));
-    }
     if (!data.data.angle) {
       errors.push(new Error("Missing rocket's angle property"));
     }
