@@ -1,7 +1,7 @@
 const rocketData = {
   "angle": 60,
   "launchDate": "23/11/2012",
-  "speed": 6,
+  "speed": 1,
   "shape": "sharp",
   "fuel": "kerosene",
   "weight": 540,
