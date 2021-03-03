@@ -20,17 +20,13 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-16.04
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo "Welcome on board!"
 
   test:
+    needs: build
     runs-on: ubuntu-16.04
     steps:
       - uses: actions/checkout@v2
@@ -53,6 +49,7 @@ jobs:
         run: sh test-consistency.sh | echo "Checking data consistency..."
   
   deploy:
+    needs: test
     runs-on: ubuntu-16.04
     steps:
     - name: Deployment
