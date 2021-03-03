@@ -65,7 +65,7 @@ class Rocket {
     var cssAnimation = document.createElement('style');
     cssAnimation.type = 'text/css';
     let rules;
-    if (rocketData.angle == 60) {
+    if (this.angle == 60 && rocketData.speed == 1) {
       rules = document.createTextNode(
         '@keyframes asteroid { 0% { top: 30vh; left: 2vw;} 62% { top: 31vh; left: 69vw;} 100% {top: 0vh; left: 80vw;}}'
       );
