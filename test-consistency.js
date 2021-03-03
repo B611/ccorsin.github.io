@@ -6,7 +6,7 @@ try {
 	if (data.data.speed && ![1, 2, 3, 6].includes(data.data.speed)) {
 		errors.push(new Error("Speed does not match any mode (1, 2, 3 or 6 are available)"));
 	}
-	if (data.data.angle && data.data.angle != data.asteroidData.hardness * 2) {
+	if (data.data.angle && data.data.angle != data.asteroidData.hardness * 15) {
 		errors.push(new Error("Rocket's angle does not fit for this asteroid hardness"));
 	}
 	if (data.data.weight && data.data.weight != data.asteroidData.weight * 0.54) {
