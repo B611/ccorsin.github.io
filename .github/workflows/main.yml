@@ -30,19 +30,30 @@ jobs:
       - name: Run a one-line script
         run: echo "Welcome on board!"
 
-  test:  
+  test:
+    runs-on: ubuntu-16.04
     steps:
-    
-    - name: Test fields
-      run: sh test-fields.sh | echo "Checking Rocket setup properties..."
-      
-    - name: Test format
-      run: sh test-format.sh | echo "Checking values format..."
-      
-    - name: Test consistency
-      run: sh test-consistency.sh | echo "Checking data consistency..."
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+        # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo "Welcome on board!"
+
+      - name: Test fields
+        run: sh test-fields.sh | echo "Checking Rocket setup properties..."
+
+      - name: Test format
+        run: sh test-format.sh | echo "Checking values format..."
+
+      - name: Test consistency
+        run: sh test-consistency.sh | echo "Checking data consistency..."
   
   deploy:
+    runs-on: ubuntu-16.04
     steps:
     - name: Deployment
       run: echo "Rocket has been launched!".
