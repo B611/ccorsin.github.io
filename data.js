@@ -1,15 +1,17 @@
 const rocketData = {
-  "angle": 60,
-  "speed": 1,
+  "angle": 8,
+  "speed": 3,
+  "weight": 54,
 }
 
 const asteroidData = {
-  "hardness": 8,
-  "weight": 300,
-  "composition": "carbone",
+  "hardness": 4,
+  "weight": 1000,
+  "composition": "nickel",
 }
 
 module.exports = {
   data: rocketData,
   asteroidData: asteroidData,
 };
+
