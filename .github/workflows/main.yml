@@ -28,27 +28,21 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Welcome on board!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+        run: echo "Welcome on board!"
 
   test:  
     steps:
     
     - name: Test fields
-      run: echo Checking Rocket setup properties...
-      run: sh test-fields.sh
+      run: sh test-fields.sh | echo "Checking Rocket setup properties..."
       
     - name: Test format
-      run: echo Checking values format...
-      run: sh test-format.sh
+      run: sh test-format.sh | echo "Checking values format..."
       
     - name: Test consistency
-      run: echo Checking data consistency...
-      run: sh test-consistency.sh
+      run: sh test-consistency.sh | echo "Checking data consistency..."
   
   deploy:
     steps:
     - name: Deployment
-      run: echo "Rocket has been launched!.
+      run: echo "Rocket has been launched!".
