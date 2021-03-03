@@ -10,13 +10,10 @@ try {
   if (data.data.speed && typeof data.data.speed != "number") {
     errors.push(new Error("Invalid format for speed property - must be a number"));
   }
-  if (data.data.temperature && typeof data.data.temperature != "number") {
-      errors.push(new Error("Invalid format for temperature property - must be a number"));
-    }
-  if (data.data.angle && typeof data.data.angle != "number" || data.data.angle > 180 || data.data.angle < 0) {
+  if (data.data.angle && (typeof data.data.angle != "number" || data.data.angle > 180 || data.data.angle < 0)) {
       errors.push(new Error("Invalid format for angle property - must be a number between [0, 180]"));
     }
-  if (data.data.weight && data.data.weight > 580 || data.data.weight < 530) {
+  if (data.data.weight && (data.data.weight > 580 || data.data.weight < 530)) {
     errors.push(new Error("Rocket's weight is out of range"));
   }
   if (data.data.shape && typeof data.data.shape != "string") {
