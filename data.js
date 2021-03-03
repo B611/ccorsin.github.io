@@ -1,7 +1,7 @@
 const rocketData = {
-  "angle": "8",
-  "launchDate": "OK",
-  "speed": "fats",
+  "angle": 8,
+  "launchDate": 23,
+  "speed": 3,
   "shape": "sharp",
   "fuel": "kerosene",
   "weight": 540,
