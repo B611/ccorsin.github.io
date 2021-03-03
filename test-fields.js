@@ -3,29 +3,26 @@ const data = require("./data.js")
 
 try {
   let errors = [];
-    if (!data.data.speed) {
+    if (!data.rocketData.speed) {
       errors.push(new Error("Missing rocket's speed property"));
     }
-    if (!data.data.date) {
+    if (!data.rocketData.date) {
       errors.push(new Error("Missing rocket's date property"));
     }
-    if (!data.data.temperature) {
-      errors.push(new Error("Missing rocket's temperature property"));
-    }
-    if (!data.data.angle) {
+    if (!data.rocketData.angle) {
       errors.push(new Error("Missing rocket's angle property"));
     }
-    if (!data.data.weight) {
+    if (!data.asteroidData.weight) {
       errors.push(new Error("Missing rocket's weight property"));
     }
-    if (!data.data.shape) {
+    if (!data.rocketData.shape) {
       errors.push(new Error("Missing rocket's shape property"));
     }
-    if (!data.data.fuel) {
+    if (!data.rocketData.fuel) {
       errors.push(new Error("Missing rocket's fuel property"));
     }
-    if (!data.data.launchDate) {
-      errors.push(new Error("Missing a date to launch the rocket"));
+    if (!data.rocketData.launchDate) {
+      errors.push(new Error("Missing a launchDate to launch the rocket"));
     }
     if (errors.length > 0) {
       throw errors; 
