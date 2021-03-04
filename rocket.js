@@ -4,7 +4,8 @@ class Rocket {
     this.rocket = document.querySelector("#rocket");
     this.speed = 6 / speed;
     this.angle = angle;
-    this.maximum = {x: window.screen.availWidth, y: window.screen.availHeigth };
+    this.maximum = {x: window.screen.availWidth, y: window.screen.availHeight };
+    console.log(this.maximum);
     this.giveAngle();
     this.loadAsterdoid();
   }
@@ -52,7 +53,7 @@ class Rocket {
           ], {
             duration: 6000,
           });
-          setTimeout(() => alert("La fusée n'a pas reussi à detruire l'asteroide. Allez voir les utilisateurs pour comprendre pourquoi"), 1000);
+          this.loadExplosion();
           asteroid.addEventListener('animationiteration', () => {
             animation.cancel();
             bool = true
@@ -60,6 +61,24 @@ class Rocket {
         }
       }
     }, 10);
+  }
+  loadExplosion() {
+    let displayed = false;
+    setInterval(() => {
+      const asteroid = document.querySelector("#asteroid");
+      const explosion = document.querySelector('#boom');
+      const coordAsteroid = asteroid.getClientRects()[0]
+
+      if (coordAsteroid.y >= (this.maximum.y - 200) || coordAsteroid.x >= (this.maximum.x - 200))
+      {
+        explosion.style.cssText = ("display: block;" + `left: ${(this.maximum.x - 400)}px ; top: ${(this.maximum.y - 400)}px;`);
+        if (!displayed)
+        {
+          displayed = true;
+          setTimeout(() => alert("La fusée n'a pas reussi à detruire l'asteroide. Allez voir les utilisateurs pour comprendre...") , 1000);
+        }
+      }
+    }, 200)
   }
 
   loadAsterdoid() {
@@ -82,13 +101,6 @@ class Rocket {
     cssAnimation.appendChild(addAnimationRule);
     document.getElementsByTagName("head")[0].appendChild(cssAnimation); 
 
-    setInterval(() => {
-      const asteroid = document.querySelector("#asteroid");
-      const explosion = document.querySelector('#boom');
-      const coordAsteroid = asteroid.getClientRects()[0]
-      if (coordAsteroid.y >= this.maximum.y - 400 || coordAsteroid.x >= this.maximum.x - 300)
-        explosion.style.cssText = ("display: block;" + `left: ${(this.maximum.x - 400)}px; top: ${(this.maximum.y - 200)}px;`);
-    }, 200)
   };
 
   launchIt(finalX, finalY) {
