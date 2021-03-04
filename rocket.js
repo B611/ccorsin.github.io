@@ -85,11 +85,34 @@ class Rocket {
   launchIt(finalX, finalY) {
     var cssAnimation = document.createElement('style');
     cssAnimation.type = 'text/css';
+    let pourcent;
+    let pourcentStop;
+      switch (this.speed) {
+      case 1: 
+        pourcent = 20;
+        pourcentStop = 25;
+        break;
+      case 2:
+        pourcent = 40;
+        pourcentStop = 45;
+        break;
+      case 3:
+        pourcent = 50;
+        pourcentStop = 55;
+        break;
+      case 6:
+        pourcent = 100;
+        pourcentStop = 100;
+        break;
+      default:
+        pourcent = 100;
+        pourcentStop = 100;
+    }
     var rules = document.createTextNode(
       '@keyframes rocket {' +
-      '0% { right: var(--rocket-right); top: var(--rocket-top); }'+
-      '100%' + `{ right: ${finalX}vw; top: ${finalY}vh }}`);
-    var addAnimationRule = document.createTextNode(`#rocket {animation: ${this.speed}s linear 1s infinite running rocket;}`)
+      '0% { opacity: 0; right: var(--rocket-right); top: var(--rocket-top); } 10% {opacity: 1;}'+
+      `${pourcent}% {opacity: 1; right: ${finalX}vw; top: ${finalY}vh;} ${pourcentStop}%, 100% { opacity: ${rocketData.speed == 1 ? 1: 0}; right: ${finalX}vw; top: ${finalY}vh }}`);
+    var addAnimationRule = document.createTextNode(`#rocket {animation: 6s linear 1s infinite running rocket;}`)
     cssAnimation.appendChild(rules);
     cssAnimation.appendChild(addAnimationRule);
     document.getElementsByTagName("head")[0].appendChild(cssAnimation);    
