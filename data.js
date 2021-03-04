@@ -1,5 +1,5 @@
 const rocketData = {
-  "angle": 60,
+  "angle": 0,
 }
 
 const asteroidData = {
