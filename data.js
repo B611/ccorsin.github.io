@@ -1,5 +1,5 @@
 const rocketData = {
-  "angle": 120,
+  "angle": 60,
   "launchDate": "23/11/1990",
   "speed": 3,
   "shape": "sharp",
@@ -9,7 +9,7 @@ const rocketData = {
 }
 
 const asteroidData = {
-  "hardness": 8,
+  "hardness": 4,
   "weight": 1000,
   "composition": "nickel",
 }
