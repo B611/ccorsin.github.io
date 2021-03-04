@@ -52,6 +52,7 @@ class Rocket {
           ], {
             duration: 6000,
           });
+          setTimeout(() => alert("La fusée n'a pas reussi à detruire l'asteroide. Allez voir les utilisateurs pour comprendre pourquoi"), 1000);
           asteroid.addEventListener('animationiteration', () => {
             animation.cancel();
             bool = true
