@@ -25,6 +25,15 @@ body {
   width: 7%;
 }
 
+#boom {
+  display: none;
+  position: absolute;
+  top: 90vh;
+  width: 90vw;
+  z-index: 2;
+  width: 20%;
+}
+
 :root{
 --rocket-top: 80vh;
 --rocket-right: 50vw;
