@@ -9,7 +9,7 @@ try {
     if (!data.data.angle) {
       errors.push(new Error("Missing rocket's angle property"));
     }
-    if (!data.asteroidData.weight) {
+    if (!data.data.weight) {
       errors.push(new Error("Missing rocket's weight property"));
     }
     if (!data.data.shape) {
