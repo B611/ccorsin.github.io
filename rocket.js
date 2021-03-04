@@ -75,7 +75,7 @@ class Rocket {
         if (!displayed)
         {
           displayed = true;
-          setTimeout(() => alert("La fusée n'a pas reussi à detruire l'asteroide. Allez voir les utilisateurs pour comprendre...") , 1000);
+          setTimeout(() => alert("La fusée n'a pas reussi à détruire l'asteroide. Allez voir les utilisateurs pour comprendre...") , 1000);
         }
       }
     }, 200)
