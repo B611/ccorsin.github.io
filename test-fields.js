@@ -21,6 +21,9 @@ try {
     if (!data.data.launchDate) {
       errors.push(new Error("Missing a launchDate to launch the rocket"));
     }
+    if (!data.data.temperature) {
+      errors.push(new Error("Missing current temperature to launch the rocket"));
+    }
     if (errors.length > 0) {
       throw errors; 
     }

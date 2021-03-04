@@ -25,6 +25,9 @@ try {
   if (data.data.launchDate && (typeof data.data.launchDate != "string" || !checkDateFormat(data.data.launchDate))) {
     errors.push(new Error("Invalid format for launchDate property - must be DD/MM/YYYY or dd-mm-yyyy or dd.mm.yyyy and a string"));
   }
+  if (data.data.temperature && typeof data.data.temperature != "number") {
+    errors.push(new Error("Invalid format for temperature property - must be a number"));
+  }
   if (errors.length > 0) {
     throw errors; 
   }

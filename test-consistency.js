@@ -12,8 +12,11 @@ try {
 	if (data.data.weight && data.data.weight != data.asteroidData.weight * 0.54) {
 		errors.push(new Error("Rocket's weight is not OK according to asteroid's weight"));
 	}
+	if (data.data.temperature && data.data.temperature >= 10) {
+		errors.push(new Error("Current temperature is to low to launch the rocket !"));
+	}
 	if (errors.length > 0) {
-		throw errors; 
+		throw errors;
 	}
 } catch (errors) {
     errors.map((e) => {
