@@ -9,7 +9,7 @@ const rocketData = {
 }
 
 const asteroidData = {
-  "hardness": 4,
+  "hardness": 8,
   "weight": 1000,
   "composition": "nickel",
 }
