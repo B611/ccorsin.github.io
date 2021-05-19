@@ -8,6 +8,8 @@ class Rocket {
     console.log(this.maximum);
     this.giveAngle();
     this.loadAsterdoid();
+    console.log('angle', angle)
+    console.log('speed', speed)
   }
 
 
