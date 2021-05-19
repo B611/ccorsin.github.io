@@ -4,12 +4,12 @@ class Rocket {
     this.rocket = document.querySelector("#rocket");
     this.speed = 6 / speed;
     this.angle = angle;
+    console.log('angle', angle)
+    console.log('speed', speed)
     this.maximum = {x: window.screen.availWidth, y: window.screen.availHeight };
     console.log(this.maximum);
     this.giveAngle();
     this.loadAsterdoid();
-    console.log('angle', angle)
-    console.log('speed', speed)
   }
 
 
