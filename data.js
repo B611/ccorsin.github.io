@@ -6,7 +6,7 @@ const rocketData = {
   "color":"yellow",
   "launchDate":"04/03/2021",
   "temperature" :20,
-  "speed": 6,
+  "speed": 3,
   }
 
 const asteroidData = {
