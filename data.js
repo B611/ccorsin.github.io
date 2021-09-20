@@ -1,5 +1,5 @@
 const rocketData = {
-  "angle": 120,
+  "angle": 121,
   "launchDate": "23/11/1990",
   "speed": 3,
   "shape": "sharp",
