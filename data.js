@@ -1,5 +1,12 @@
 const rocketData = {
-
+  "weight":540,
+  "shape": "sharp",
+  "angle":120,
+  "fuel":"H(l)",
+  "color":"yellow",
+  "launchDate":"04/03/2021",
+  "temperature" :20,
+  "speed": 6,
   }
 
 const asteroidData = {
