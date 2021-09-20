@@ -1,12 +1,13 @@
 const rocketData = {
-  "angle": 121,
-  "launchDate": "23/11/1990",
-  "speed": 3,
+  "weight":540,
   "shape": "sharp",
-  "fuel": "kerosene",
-  "weight": 540,
-  "temperature": 15,
-}
+  "angle":60,
+  "fuel":"H(l)",
+  "color":"pink",
+  "launchDate":"04/03/2021",
+  "temperature" :20,
+  "speed": 1,
+  }
 
 const asteroidData = {
   "hardness": 8,
