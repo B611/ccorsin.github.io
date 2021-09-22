@@ -1,5 +1,5 @@
 const rocketData = {
-  "launchdate": "22/09/2021",
+  "launchDate": "22/09/2021",
   "temperature": 15,
   "angle":120,
   "weight": 540,
